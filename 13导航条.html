@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>导航条</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+ <div class="container">
+   <h1 class="page-header">导航条</h1>
+
+  <!--用.navbar定义导航条-->
+  <div class="navbar">
+  <div class="navbar-inner">
+  <!--定义导航的Title-->
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">首页</a></li>
+      <li><a href="#">Link1</a></li>
+      <li><a href="#">Link2</a></li>
+	  <li><a href="#">Link3</a></li>
+	  <!--添加分隔符-->
+	  <li class="divider-vertical"></li>
+      <li><a href="#">Link4</a></li>
+	  <li><a href="#">Link5</a></li>
+      <!--在导航中添加一个普通表单-->
+	  <form class="navbar-form pull-right">
+        <input type="text" class="span2">
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+    </ul>
+  </div>
+</div>
+
+
+
+
+ <div class="navbar">
+  <div class="navbar-inner">
+  <div class="container">
+  <!--定义导航的Title-->
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">首页</a></li>
+      <li><a href="#">Link1</a></li>
+      <li><a href="#">Link2</a></li>
+	  <li><a href="#">Link3</a></li>
+	  <!--添加分隔符-->
+	  <li class="divider-vertical"></li>
+      <li><a href="#">Link4</a></li>
+	  <li><a href="#">Link5</a></li>
+      <!--在导航中添加一个搜索表单-->
+	  <form class="navbar-search pull-right">
+	  <!--为输入框添加.search-query即可获得一个搜索表单-->
+       <input type="text" class="search-query" placeholder="Search">
+      </form>
+	  
+    </ul>
+	</div>
+  </div>
+</div>
+
+
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+  
+  <!--定义导航的Title-->
+    <a class="brand" href="#">Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">首页</a></li>
+      <li><a href="#">Link1</a></li>
+      <li><a href="#">Link2</a></li>
+	  <li><a href="#">Link3</a></li>
+	  
+      <!--添加一个下拉菜单-->
+	  <ul class="nav pull-right">
+	  <li><a href="#">Link5</a></li>
+	   <!--添加分隔符-->
+	  <li class="divider-vertical"></li>
+     
+        <li class="dropdown">
+         <a href="#" class="dropdown-toggle " data-toggle="dropdown">
+          Account
+          <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+             <li><a tabindex="-1" href="#">Action</a></li>
+             <li><a tabindex="-1" href="#">Another action</a></li>
+          </ul>
+         </li>
+       </ul>
+    </ul>
+	
+  </div>
+</div>
+
+
+
+ </div>
+
+
+ </BODY>
+</HTML>

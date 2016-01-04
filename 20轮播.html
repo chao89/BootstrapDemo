@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>轮播</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+ <div class="container">
+   <h1 class="page-header">轮播</h1>
+   <!-- slide是设置轮播的动画效果（平缓过渡）默认是5秒切换一次-->
+   <div id="myCarousel" class="carousel slide">
+   <!--用作指示器-->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+   <div class="carousel-inner">
+   <!--每一个整体都用一个.item定义一下active表示默认显示-->
+   <div class="item active">
+   <img src="http://placehold.it/940x360/C24704/FFFFFF&text=Bootstrp" alt="">
+   <!--定义文字的样式（半透明黑色的背景）-->
+   <div class="carousel-caption">
+   <h4>标题一</h4>
+   <p>Bootstrap提供了几种可以帮你快速上手的方式，每种方式针对具有不同技能等级的开发者和不同的使用场景。</p>
+   </div>
+   </div>
+
+   <div class="item">
+   <img src="http://placehold.it/940x360/C24704/FFFFFF&text=Bootstrp" alt="">
+   <div class="carousel-caption">
+   <h4>标题二</h4>
+   <p>Bootstrap提供了几种可以帮你快速上手的方式，每种方式针对具有不同技能等级的开发者和不同的使用场景.</p>
+   </div>
+   </div>
+
+   <div class="item">
+   <img src="http://placehold.it/940x360/C24704/FFFFFF&text=Bootstrp" alt="">
+   <div class="carousel-caption">
+   <h4>标题三</h4>
+   <p>Bootstrap提供了几种可以帮你快速上手的方式，每种方式针对具有不同技能等级的开发者和不同的使用场景。</p>
+   </div>
+   </div>
+   </div>
+   <!--用作控制器-->
+   <a href="#myCarousel" data-slide="prev" class="carousel-control left"> ‹ </a>
+   <a href="#myCarousel" data-slide="next" class="carousel-control right"> › </a>
+   </div>
+
+ </div>
+ <!--JS启动方式-->
+ <script>
+ //将带有"carousel"类样式的元素作为轮播组件启动
+ $('.carousel').carousel()
+ //id="myCarousel"的元素作为轮播组件启动
+ $('#myCarousel').carousel()
+
+ //$('#myCarousel').on('slid', function () {
+  //alert("dfdf");
+ //})
+
+ </script>
+ </BODY>
+</HTML>

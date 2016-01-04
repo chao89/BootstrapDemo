@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>下拉菜单</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+<div class="container">
+<h1 class="page-header">下拉菜单</h1>
+
+<div class="dropdown">
+<!--data-toggle="dropdown" 表示触发下拉事件-->
+    <button class="btn dropdown-toggle" data-toggle="dropdown">
+    Dropdown
+    <span class="caret"></span>
+    </button>
+  <!--添加下拉列表-->
+  <ul class="dropdown-menu" role="menu"  aria-labelledby="dropdownMenu">
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+    <li><a tabindex="-1" href="#">Something else here</a></li>
+    <li class="divider"></li>
+    <li class="disabled"><a tabindex="-1" href="#">Separated link</a></li>
+	<!--添加二级子菜单-->
+	<li class="dropdown-submenu">
+       <a tabindex="-1" href="#">More options</a>
+       <ul class="dropdown-menu">
+       <li><a tabindex="-1" href="#">Another action</a></li>
+       <li><a tabindex="-1" href="#">Something else here</a></li>
+       </ul>
+     </li>
+  </ul>
+
+</div>
+<div class="btn-toolbar">
+<div class="btn-group ">
+  <button class="btn">Left</button>
+  <button class="btn">Middle</button>
+  <button class="btn">Right</button>
+</div>
+</div>
+
+<div class="btn-group">
+<!--为了保证URL符合规范，请使用data-target属性来代替href="#"。-->
+  <a class="btn dropdown-toggle" data-toggle="dropdown" data-target="#" href="/page.html" >
+    动作
+	<!--在按钮的后面创建一个箭头-->
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+  </ul>
+</div>
+
+<!--dropup表示创建一个向上弹出的菜单样式-->
+<div class="btn-group dropup">
+  <button class="btn">动作</button>
+  <!--data-toggle="dropdown"主要是给按钮绑定下拉菜单的点击弹出事件-->
+  <button class="btn dropdown-toggle" data-toggle="dropdown" id="Mybtn">
+  <!--在按钮的后面创建一个箭头-->
+  <span class="caret"></span>
+  </button>
+  <!--创建下拉子菜单用.dropdown-menu定义-->
+  <ul class="dropdown-menu">
+    <li><a tabindex="-1" href="#">Action</a></li>
+    <li><a tabindex="-1" href="#">Another action</a></li>
+  </ul>
+</div>
+
+<legend><h4>标签页中的下拉菜单</h4></legend>
+<div class="bs-docs-example">
+            <ul class="nav nav-pills">
+              <li class="active"><a href="#">Regular link</a></li>
+              <li class="dropdown open">
+                <a class="dropdown-toggle" id="drop4" role="button" data-toggle="dropdown" href="#">Dropdown <b class="caret"></b></a>
+                <ul id="menu1" class="dropdown-menu" role="menu" aria-labelledby="drop4">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 2 <b class="caret"></b></a>
+                <ul id="menu2" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" id="drop5" role="button" data-toggle="dropdown" href="#">Dropdown 3 <b class="caret"></b></a>
+                <ul id="menu3" class="dropdown-menu" role="menu" aria-labelledby="drop5">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                  <li role="presentation" class="divider"></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+              </li>
+            </ul> <!-- /tabs -->
+          </div>
+
+</div>
+ </BODY>
+
+
+ <script>
+
+ //对所有的class="dropdown-toggle"按钮或是链接定义下拉事件
+ //$('.dropdown-toggle').dropdown()
+ //对ID=Mybtn的按钮或是链接定义下拉事件
+  //$('#Mybtn').dropdown()()
+ //$('#Mybtn').dropdown()('toggle')
+ </script>
+</HTML>

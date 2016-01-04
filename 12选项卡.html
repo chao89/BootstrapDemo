@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>选项卡</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+ <div class="container">
+<h1 class="page-header">选项卡</h1>
+<!--设置选项卡的布局样式.tabs-left-->
+<div class="tabable">
+<!--设置选项卡的展示样式：.nav-tabs  .nav-pills 
+如果想创建堆叠式的排列，可以在nav-tabs（nav-pills）的后面添加nav-stacked -->
+<ul class="nav nav-tabs">
+<!--class="active"表示默认激活第一个选项卡-->
+<li class="active"><a href="#tab1" data-toggle="tab">选项一</a></li>
+<li><a href="#tab2"  data-toggle="tab">选项二</a></li>
+<li><a href="#tab3"  data-toggle="tab">选项三</a></li>
+</ul>
+
+<div class="tab-content">
+ <div class="tab-pane active" id="tab1"><p>选项一的内容</p></div>
+ <div class="tab-pane" id="tab2"><p>选项二的内容</p></div>
+ <div class="tab-pane" id="tab3"><p>选项三的内容</p></div>
+</div>
+ </div>
+
+
+<div class="tabable">
+
+<ul class="nav nav-pills" id="myTab">
+<!--class="active"表示默认激活第一个选项卡-->
+<li class="active"><a href="#content1" data-toggle="tab">选项一</a></li>
+<li><a href="#content2"  data-toggle="tab">选项二</a></li>
+<li><a href="#content3"  data-toggle="tab">选项三</a></li>
+</ul>
+
+<div class="tab-content">
+ <div class="tab-pane active" id="content1"><p>选项一的内容</p></div>
+ <div class="tab-pane" id="content2"><p>选项二的内容</p></div>
+ <div class="tab-pane" id="content3"><p>选项三的内容</p></div>
+</div>
+
+ </div>
+
+ </div>
+ </BODY>
+ <script>
+
+
+
+
+/* $('#myTab a').click(function (e) {
+  e.preventDefault();
+  $(this).tab('show');
+})
+*/
+ 
+ </script>
+
+</HTML>

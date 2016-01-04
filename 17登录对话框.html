@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>对话框</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+ <div class="container">
+   <h1 class="page-header">对话框(登录)</h1>
+
+ <a href="#login" data-toggle="modal" class="btn btn-primary">登录</a>
+<!--定义一个modal的div包围整个对话框内容.hide表示隐藏 .fade是动画效果-->
+ <div class="modal hide fade" id="login">
+<!--用.modal-header定义一个对话框的头-->
+ <div class="modal-header">
+ <!--添加一个关闭的选项-->
+ <a href="#" class="close" data-dismiss="modal">X</a>
+   <h4>用户登录<h4>
+ </div>
+<!--用.modal-body定义对话框的主体内容-->
+ <div class="modal-body">
+   <form class="form-horizontal">
+     <div class="control-group">
+	   <label class="control-label">用户名</label>
+	   <div class="controls">
+	     <input type="text">
+	   </div>
+	 </div>
+	 <div class="control-group">
+	   <label class="control-label">密码</label>
+	   <div class="controls">
+	     <input type="password">
+	   </div>
+	 </div>
+   </form>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-primary">登录</button>
+   </div>
+   </div>
+
+<!----------------------------------------------------------------------------------->
+  <!--触发弹出对话框-->
+  <a href="#myModal"  role="button" class="btn" data-toggle="modal">链接触发</a>
+  <button type="button" class="btn" data-toggle="modal" data-target="#myModal">按钮触发</button>
+  <!--定义一个.modal的div包围整个对话框内容 hide表示隐藏 fade是动画效果
+      data-backdrop="false" 表示没有背景遮挡，如是true表示显示黑色的页面背景且点击黑色背景会隐蔽modal
+      data-backdrop="static"表示有背景遮挡，并且点击对黑色背景区域，对话框不会消失-->
+  <div id="myModal" class="modal hide fade" data-backdrop="static">
+  <!--用.modal-header定义一个对话框的头-->
+  <div class="modal-header">
+   <!--添加一个关闭按钮-->
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+    <h3>对话框标题</h3>
+  </div>
+  <!--用.modal-body定义对话框的主体内容-->
+  <div class="modal-body">
+    <p>One fine body…</p>
+  </div>
+  <!--用.modal-footer定义对话框的主体内容-->
+  <div class="modal-footer">
+    <a href="#" class="btn" onclick="hideModal()">关闭</a>
+    <a href="#" class="btn btn-primary">Save changes</a>
+  </div>
+  </div>
+ </div>
+ </BODY>
+
+<script>
+//关闭隐藏对话框
+function hideModal(){
+$('#myModal').modal('toggle');
+}
+
+$('#myModal').on('hidden', function () {
+  alert('关闭对话框触发的事件');
+})
+
+</script>
+
+</HTML>

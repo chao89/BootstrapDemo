@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>表单</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+ <div class="container">
+   <h1 class="page-header">表单</h1>
+
+ <form>
+  <fieldset>
+    <legend>普通表单</legend>
+    <label>Label name</label>
+    <input type="text" placeholder="Type something…">
+    <span class="help-block">Example block-level help text here.</span>
+    <label class="checkbox">
+      <input type="checkbox"> Check me out
+    </label>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
+</form>
+
+ <fieldset>
+ <legend>搜索表单</legend>
+ <!--为表单增加.form-search类，并为<input>增加.search-query类，可将输入框变成圆角状-->
+<form class="form-search">
+  <input type="text" class="input-medium search-query" placeholder="Type something…">
+  <button type="submit" class="btn">Search</button>
+</form>
+  </fieldset>
+
+
+ <legend>行内表单</legend>
+ <!--为表单增加.form-inline类， 结果是一个压缩型排列的表单，其中label左侧对齐、控件为inline-block类型。-->
+  <form class="form-inline">
+  <input type="text" class="input-small" placeholder="Email">
+  <input type="password" class="input-small" placeholder="Password">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button type="submit" class="btn">Sign in</button>
+</form>
+  
+<legend>水平表单</legend>
+<!--
+ 为表单添加.form-horizontal类
+ 将label和控件包裹在.control-group中
+ 为label添加.control-label类
+ 将任何相关的控件包裹在.controls中，以确保最佳的对齐
+-->
+  <form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> Remember me
+      </label>
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </div>
+</form>
+ </div>
+ </BODY>
+</HTML>

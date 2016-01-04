@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>提示</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+ <div class="container">
+   <h1 class="page-header">工具提示</h1>
+   <p><a title="这是一个提示信息" rel="tooltip" href="#">Tooltip</a></p>
+   <p><a class="btn" title="这是标题" data-content="这是提示的主要内容" rel="popover" href="#">Popover</a></p>
+
+
+
+ </div>
+<script>
+  $("a[rel=tooltip]").tooltip()
+  $("a[rel=popover]").popover()
+</script>
+
+ </BODY>
+</HTML>

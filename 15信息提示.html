@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <HEAD>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+  <TITLE>信息提示</TITLE>
+  <!-- 最新 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="js/jquery.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="js/bootstrap.js"></script>
+ </HEAD>
+
+ <BODY>
+
+ <div class="container">
+ 
+
+   <h1 class="page-header">信息提示</h1>
+  
+
+    <div class="alert alert-info" id="Myalert">
+	<!--用<a>标签来设置关闭功能-->
+	<a href="#" class="close" data-dismiss="alert">X</a>
+    <h4>提示</h4>
+    这是一段提示信息。。
+	</div>
+
+    <!-- 带按钮的的信息提示 -->
+	<div class="alert alert-error fade in">
+     <button type="button" class="close" data-dismiss="alert">&times;</button>
+     <strong>Warning!</strong> Best check yo self, you're not looking too good.
+	 <p>
+     <a class="btn btn-danger" href="#">接受</a> <a class="btn" href="#">拒绝</a>
+     </p>
+    </div>
+
+
+ </div>
+ </BODY>
+
+<script>
+//给ID="Myalert"添加关闭时的时间绑定
+$('#Myalert').bind('closed', function () {
+  alert('提示信息即将被关闭');
+})
+//关闭提示最好放在一个方法里面，不然页面一启动，信息提示就关闭了
+//$('#Myalert').alert('close');
+
+</script>
+
+</HTML>
